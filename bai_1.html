@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkPrime</title>
+    <p>Nhập số lượng số nguyên tố cần in ra</p>
+    <input type="text" id="number" >
+    <button onclick="getPrime()">In dãy số</button>
+    <div id = "prime"></div>
+</head>
+<body>
+<script>
+
+
+        function checkPrime(n){
+            if(n<=1){
+                return false;
+            }else {
+                for (let i=2;i<=Math.sqrt(n);i++){
+                   if (n%i==0){
+                       return false;
+                   }
+                }
+            }
+
+            return true;
+        }
+    function getPrime() {
+        let number = parseInt(document.getElementById("number").value);
+        let cont = 0;
+        let n = 2;
+        while (cont < number) {
+            if (checkPrime(n)) {
+                document.write(n + " ");
+                cont += 1;
+            }
+            n += 1;
+        }
+    }
+</script>
+</body>
+</html>

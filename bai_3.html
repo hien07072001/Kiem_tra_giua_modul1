@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = new Date();
+    let namHT = a.getFullYear();
+    function Old(number) {
+        if (number> namHT) {
+            alert("Không hợp lệ");
+        } else if (number== namHT) {
+            alert("Bạn được một tuổi")
+        } else {
+            alert("Số tuổi của bạn là:"+ (namHT- number))
+        }
+    }
+
+    let year = parseInt(prompt("Bạn sinh năm bao nhiêu?"));
+    if(isNaN(year) == true) {
+        alert("Không hợp lí")
+    } else {
+        Old(year);
+    }
+
+    </script>
+
+</body>
+</html>

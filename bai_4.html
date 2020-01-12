@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tongDuongCheoChinh(n) {
+        let count = 0;
+        for( let i = 0; i < n.length; i++){
+            count += n[i][i];
+        }
+        return count;
+    }
+    let maTran = [
+        [3,-1,-2,],
+        [1,6,-1,],
+        [2,1,0]
+    ];
+    document.write("Tổng các đường chéo chính của ma trận vuông là: " + tongDuongCheoChinh(maTran));
+
+</script>
+
+</body>
+</html>
